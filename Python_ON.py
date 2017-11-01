@@ -1,5 +1,5 @@
 print("Temporisation initialisation Raspberry")
-time.sleep(600)
+time.sleep(10)
 
 print("Demarrage programme")
 from ftplib import FTP
