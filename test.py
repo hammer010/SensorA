@@ -10,6 +10,4 @@ def timer(length, dt=1):
         print "Time's up!"
 if __name__ == '__main__':
     timer(5)
-os.clear('')
-
 os.system('ls') #pour linux
