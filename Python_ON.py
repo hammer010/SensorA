@@ -1,29 +1,30 @@
-print("Demarrage programme")
-from ftplib import FTP
-from pyA20.gpio import gpio
-from pyA20.gpio import port
-
-#import RPi.GPIO as GPIO
-import dht22
-import time
-import datetime
-
-# Connexion serveur FTP
-ftp = FTP('192.168.1.70', 'pi', 'raspberry')
-etat = ftp.getwelcome()
-print "Etat : ",etat
-
-# initialize GPIO
-#gpio.setwarnings(False)
-#gpio.setmode(GPIO.BCM)
-PIN2 = port.PA6
-gpio.init()
-#gpio.cleanup()
-
-def average(list): 
-    if (list!= []): return float(sum(list)) / len(list)
 while 1 :
-# read data using pin 14
+    print("Demarrage programme")
+    from ftplib import FTP
+    from pyA20.gpio import gpio
+    from pyA20.gpio import port
+
+    #import RPi.GPIO as GPIO
+    import dht22
+    import time
+    import datetime
+
+    # Connexion serveur FTP
+    ftp = FTP('192.168.1.70', 'pi', 'raspberry')
+    etat = ftp.getwelcome()
+    print "Etat : ",etat
+
+    # initialize GPIO
+    #gpio.setwarnings(False)
+    #gpio.setmode(GPIO.BCM)
+    PIN2 = port.PA6
+    gpio.init()
+    #gpio.cleanup()
+
+    def average(list): 
+        if (list!= []): return float(sum(list)) / len(list)
+        
+    # read data using pin 14
     instance = dht22.DHT22(pin=PIN2)
 
     i = 0
@@ -37,7 +38,7 @@ while 1 :
             list_hum.append(result.humidity)
             i = i + 1
             print("Mesure N*" + str(i) + " effectuee")
-            time.sleep(6)
+            time.sleep(1)
             if i == 10 : 
                 break
     print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
@@ -63,4 +64,4 @@ while 1 :
 # Fin du programme
     print("Sauvegarde des resultats effectuee")
     print("Attente 5 min")
-    time.sleep(30)
+    time.sleep(10)
