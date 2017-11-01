@@ -7,4 +7,4 @@ def timer(length, dt=1):
         time.sleep(dt) 
         print "Time's up!"
 if __name__ == '__main__':
-    timer(30
+    timer(30)
