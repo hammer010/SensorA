@@ -1,3 +1,6 @@
+import time
+import dht22
+import datetime
 print("Temporisation initialisation Raspberry")
 time.sleep(10)
 
@@ -5,11 +8,6 @@ print("Demarrage programme")
 from ftplib import FTP
 from pyA20.gpio import gpio
 from pyA20.gpio import port
-
-#import RPi.GPIO as GPIO
-import dht22
-import time
-import datetime
 
 # initialize GPIO
 #gpio.setwarnings(False)
