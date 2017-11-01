@@ -22,7 +22,7 @@ gpio.init()
 
 def average(list): 
     if (list!= []): return float(sum(list)) / len(list)
-while true
+while 1
     # read data using pin 14
     instance = dht22.DHT22(pin=PIN2)
 
@@ -30,7 +30,7 @@ while true
     list_temp = []
     list_hum = []
 
-    while true :
+    while 1 :
         result = instance.read()
         if result.is_valid():
         
