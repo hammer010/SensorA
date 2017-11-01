@@ -9,9 +9,7 @@ def timer(length, dt=1):
         time.sleep(dt) 
         print "Time's up!"
 if __name__ == '__main__':
-    timer(30)
+    timer(5)
 os.clear('')
-import os
- 
-os.system('cls') #pour Windows
-os.system('clear') #pour linux
+
+os.system('ls') #pour linux
