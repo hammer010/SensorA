@@ -1,11 +1,11 @@
 import time
  
-def timer(length):
-    start = time.time()
-    running = True
-    while running:
-        if time.time() - start >= length:
-            print "Time's up!"
+def timer(length, dt=1): 
+    end = time.time() + length 
+    while(time.time() < end): 
+        print "Only %.g more seconds!" % (end - time.time()) 
+        time.sleep(dt) 
+    print "Time's up!"
             running = False
         else:
             print "Only %.1f more seconds!" % (length - (time.time() - start))
