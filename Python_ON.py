@@ -24,20 +24,20 @@ def average(list):
     if (list!= []): return float(sum(list)) / len(list)
 #while 1 :
     # read data using pin 14
-    instance = dht22.DHT22(pin=PIN2)
+instance = dht22.DHT22(pin=PIN2)
 
-    i = 0
-    list_temp = []
-    list_hum = []
+i = 0
+list_temp = []
+list_hum = []
     
-while True :
+while 1 :
     result = instance.read()
     if result.is_valid():
     list_temp.append(result.temperature)
     list_hum.append(result.humidity)
     i = i + 1
-        print("Mesure N*" + str(i) + " effectuee")
-        time.sleep(6)
+    print("Mesure N*" + str(i) + " effectuee")
+    time.sleep(6)
     if i == 10 : 
         break
 
