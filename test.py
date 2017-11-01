@@ -11,4 +11,4 @@ def timer(length):
             print "Only %.1f more seconds!" % (length - (time.time() - start))
  
 if __name__ == '__main__':
-    timer(30)
+    timer(60)
