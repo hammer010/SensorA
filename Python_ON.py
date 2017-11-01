@@ -39,7 +39,7 @@ while 1 :
             list_hum.append(result.humidity)
             i = i + 1
             print("Mesure N*" + str(i) + " effectuee")
-            time.sleep(1)
+            time.sleep(6)
             if i == 10 : 
                 break
     print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
@@ -65,4 +65,4 @@ while 1 :
 # Fin du programme
     print("Sauvegarde des resultats effectuee")
     print("Attente 5 min")
-    time.sleep(10)
+    time.sleep(30)
