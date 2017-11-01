@@ -5,8 +5,8 @@ def timer(length, dt=1):
     while(time.time() < end): 
         print "Only %.g more seconds!" % (end - time.time()) 
         time.sleep(dt) 
-    print "Time's up!"
-            running = False
+        print "Time's up!"
+ 
         else:
             print "Only %.1f more seconds!" % (length - (time.time() - start))
  
