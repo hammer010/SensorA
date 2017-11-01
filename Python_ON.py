@@ -40,6 +40,7 @@ while 1 :
             list_temp.append(result.temperature)
             list_hum.append(result.humidity)
             i = i + 1
+            os.system('clear')
             print(str(i) + "0%")
             time.sleep(6)
             os.system('clear')
