@@ -41,7 +41,7 @@ while 1 :
             list_temp.append(result.temperature)
             list_hum.append(result.humidity)
             i = i + 1
-            print("Mesure N*" + str(i) + " effectuee")
+            print(str(i) + "0%")
             time.sleep(6)
             if i == 10 : 
                 break
