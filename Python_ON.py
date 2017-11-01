@@ -1,25 +1,26 @@
+print("Demarrage programme")
+from ftplib import FTP
+from pyA20.gpio import gpio
+from pyA20.gpio import port
+
+#import RPi.GPIO as GPIO
+import dht22
+import time
+import datetime
+
+# initialize GPIO
+#gpio.setwarnings(False)
+#gpio.setmode(GPIO.BCM)
+PIN2 = port.PA6
+gpio.init()
+#gpio.cleanup()
+
 while 1 :
-    print("Demarrage programme")
-    from ftplib import FTP
-    from pyA20.gpio import gpio
-    from pyA20.gpio import port
-
-    #import RPi.GPIO as GPIO
-    import dht22
-    import time
-    import datetime
-
+    
     # Connexion serveur FTP
     ftp = FTP('192.168.1.70', 'pi', 'raspberry')
     etat = ftp.getwelcome()
     print "Etat : ",etat
-
-    # initialize GPIO
-    #gpio.setwarnings(False)
-    #gpio.setmode(GPIO.BCM)
-    PIN2 = port.PA6
-    gpio.init()
-    #gpio.cleanup()
 
     def average(list): 
         if (list!= []): return float(sum(list)) / len(list)
