@@ -11,3 +11,7 @@ def timer(length, dt=1):
 if __name__ == '__main__':
     timer(30)
 os.clear('')
+import os
+ 
+os.system('cls') #pour Windows
+os.system('clear') #pour linux
