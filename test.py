@@ -6,3 +6,5 @@ def timer(length, dt=1):
         print "Only %.g more seconds!" % (end - time.time()) 
         time.sleep(dt) 
         print "Time's up!"
+if __name__ == '__main__':
+    timer(30
