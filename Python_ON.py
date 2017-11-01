@@ -1,6 +1,7 @@
 import time
 import dht22
 import datetime
+import os
 print("Temporisation initialisation Raspberry")
 time.sleep(10)
 
@@ -41,6 +42,7 @@ while 1 :
             i = i + 1
             print(str(i) + "0%")
             time.sleep(6)
+            os.system('clear')
             if i == 10 : 
                 break
     print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
