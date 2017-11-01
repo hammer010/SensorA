@@ -33,13 +33,13 @@ list_hum = []
 while 1 :
     result = instance.read()
     if result.is_valid():
-    list_temp.append(result.temperature)
-    list_hum.append(result.humidity)
-    i = i + 1
-    print("Mesure N*" + str(i) + " effectuee")
-    time.sleep(6)
-    if i == 10 : 
-        break
+        list_temp.append(result.temperature)
+        list_hum.append(result.humidity)
+        i = i + 1
+        print("Mesure N*" + str(i) + " effectuee")
+        time.sleep(6)
+        if i == 10 : 
+            break
 print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
 print("Temperature: " + str(average(list_temp)) + " C")
 print("Humidite: " + str(average(list_hum)) + " %")
