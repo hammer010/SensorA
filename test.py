@@ -1,4 +1,6 @@
 import time
+import os  
+
  
 def timer(length, dt=1): 
     end = time.time() + length 
@@ -8,3 +10,4 @@ def timer(length, dt=1):
         print "Time's up!"
 if __name__ == '__main__':
     timer(30)
+os.system('cls')
