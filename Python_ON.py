@@ -68,4 +68,4 @@ while 1 :
 # Fin du programme
     print("Resultats OK")
     print("Sleep ...")
-    time.sleep(30)
+    time.sleep(300)
