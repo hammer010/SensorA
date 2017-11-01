@@ -1,3 +1,6 @@
+print("Temporisation initialisation Raspberry")
+time.sleep(600)
+
 print("Demarrage programme")
 from ftplib import FTP
 from pyA20.gpio import gpio
@@ -63,6 +66,6 @@ while 1 :
     ftp.close()
 
 # Fin du programme
-    print("Sauvegarde des resultats effectuee")
-    print("Attente 5 min")
+    print("Resultats OK")
+    print("Sleep ...")
     time.sleep(30)
