@@ -1,5 +1,13 @@
 import mysql.connector 
 
-conn = mysql.connector.connect(host="localhost",user="root",password="XXX", database="test1")
+conn = mysql.connector.connect(host="localhost",user="pi",password="raspberry", database="test")
 cursor = conn.cursor()
+
+
+
+
+
+
+
+
 conn.close()
