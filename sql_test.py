@@ -68,7 +68,7 @@ while 1 :
     print ftp.dir()
     ftp.close()
    
-# Envoi resultats vers serveur FTP
+# Envoi resultats vers mySQL
     conn = mysql.connector.connect(host="192.168.1.70",user="pi",password="raspberry", database="test")
     cursor = conn.cursor()
     conn.close()
