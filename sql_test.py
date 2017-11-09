@@ -22,9 +22,9 @@ gpio.init()
 while 1 :
     
     # Connexion serveur FTP
-    ftp = FTP('192.168.1.170', 'pi', 'raspberry')
-    etat = ftp.getwelcome()
-    print "Etat : ",etat
+    #ftp = FTP('192.168.1.170', 'pi', 'raspberry')
+    #etat = ftp.getwelcome()
+    #print "Etat : ",etat
 
     def average(list): 
         if (list!= []): return float(sum(list)) / len(list)
@@ -60,13 +60,13 @@ while 1 :
     fichier.close()
 
 # Envoi resultats vers serveur FTP
-    ftp.cwd("/var/www/html")
-    fichier = "/home/orangepi/SensorA/sensorA.txt"
-    file = open(fichier,'rb')
-    ftp.storbinary('STOR '+'sensorA.txt', file)
-    ftp.retrlines('LIST')
-    print ftp.dir()
-    ftp.close()
+    #ftp.cwd("/var/www/html")
+    #fichier = "/home/orangepi/SensorA/sensorA.txt"
+    #file = open(fichier,'rb')
+    #ftp.storbinary('STOR '+'sensorA.txt', file)
+    #ftp.retrlines('LIST')
+    #print ftp.dir()
+    #ftp.close()
    
 # Envoi resultats vers mySQL
     conn = mysql.connector.connect(host="192.168.1.170",user="pi",password="raspberry", database="test")
