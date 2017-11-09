@@ -22,7 +22,7 @@ gpio.init()
 while 1 :
     
     # Connexion serveur FTP
-    ftp = FTP('192.168.1.70', 'pi', 'raspberry')
+    ftp = FTP('192.168.1.170', 'pi', 'raspberry')
     etat = ftp.getwelcome()
     print "Etat : ",etat
 
@@ -69,7 +69,7 @@ while 1 :
     ftp.close()
    
 # Envoi resultats vers mySQL
-    conn = mysql.connector.connect(host="192.168.1.70",user="pi",password="raspberry", database="test")
+    conn = mysql.connector.connect(host="192.168.1.170",user="pi",password="raspberry", database="test")
     cursor = conn.cursor()
     conn.close()
 
