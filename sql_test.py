@@ -72,9 +72,8 @@ while 1 :
     conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
     cursor = conn.cursor()
     
-    cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''')
-    user = ("olivier", "34")
-    cursor.execute("""INSERT INTO user (name, age) VALUES(%s, %s)""", user)
+    cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''') 
+    cursor.execute("INSERT INTO user (name, age) VALUES(%s, %s)", ("olivier", "34"))
     conn.close()
 
 # Fin du programme
