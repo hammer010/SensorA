@@ -69,12 +69,27 @@ while 1 :
     #ftp.close()
    
 # Envoi resultats vers mySQL
-    conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
-    cursor = conn.cursor()
+    #conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
+    #cursor = conn.cursor()
+ 
+    con = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
+
+    with con:
     
-    cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''') 
-    cursor.execute("INSERT INTO user (name, age) VALUES(%s, %s)", ("olivier", "34"))
+    cur = con.cursor()
+    cur.execute("DROP TABLE IF EXISTS Writers")
+    cur.execute("CREATE TABLE Writers(Id INT PRIMARY KEY AUTO_INCREMENT, \
+                 Name VARCHAR(25))")
+    cur.execute("INSERT INTO Writers(Name) VALUES('Jack London')")
+    cur.execute("INSERT INTO Writers(Name) VALUES('Honore de Balzac')")
+    cur.execute("INSERT INTO Writers(Name) VALUES('Lion Feuchtwanger')")
+    cur.execute("INSERT INTO Writers(Name) VALUES('Emile Zola')")
+    cur.execute("INSERT INTO Writers(Name) VALUES('Truman Capote')")
     conn.close()
+    #cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''') 
+    #cursor.execute("INSERT INTO user (name, age) VALUES(%s, %s)", ("olivier", "34"))
+    
+    
 
 # Fin du programme
     print("Resultats OK")
