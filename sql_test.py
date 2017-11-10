@@ -69,7 +69,7 @@ while 1 :
     #ftp.close()
    
 # Envoi resultats vers mySQL
-    conn = mysql.connector.connect(host="192.168.1.170",user="sensora",password="sensora", database="test")
+    conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
     cursor = conn.cursor()
     conn.close()
 
