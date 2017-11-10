@@ -73,6 +73,8 @@ while 1 :
     cursor = conn.cursor()
     
     cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''')
+    user = ("olivier", "34")
+    cursor.execute("""INSERT INTO user (name, age) VALUES(%s, %s)""", user)
     conn.close()
 
 # Fin du programme
