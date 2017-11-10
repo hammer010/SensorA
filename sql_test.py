@@ -69,21 +69,12 @@ while 1 :
     #ftp.close()
    
 # Envoi resultats vers mySQL
-    #conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
-    #cursor = conn.cursor()
- 
-    con = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test");
-
-    with con:
+    conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
+    cursor = conn.cursor()
+    cursor.execute('''CREATE DATABASE COUCOU;''') 
     
-        cur = con.cursor()
-        cur.execute("DROP TABLE IF EXISTS Writers")
-        conn.close()
-    #cursor.execute('''INSERT INTO Mesures VALUES (1, 2);''') 
-    #cursor.execute("INSERT INTO user (name, age) VALUES(%s, %s)", ("olivier", "34"))
+    conn.close()
     
-    
-
 # Fin du programme
     print("Resultats OK")
     print("Sleep ...")
