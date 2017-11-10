@@ -72,7 +72,7 @@ while 1 :
     conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
     cursor = conn.cursor()
     
-    Mesures = {"Horo": "10", "Temp" :}
+    Mesures = {"Horo": "10", "Temp" :"20"}
     cursor.execute("""INSERT INTO Mesures (Horo, Temp) VALUES(%(Horo)s, %(Temp)s)""", Mesures)
     conn.close()
 
