@@ -71,7 +71,7 @@ while 1 :
 # Envoi resultats vers mySQL
     conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="test")
     cursor = conn.cursor()
-    cursor.execute('''CREATE DATABASE COUCOU;''') 
+    cursor.execute(CREATE DATABASE COUCOU;) 
     
     conn.close()
     
