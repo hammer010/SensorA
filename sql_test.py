@@ -76,7 +76,7 @@ while 1 :
                "VALUES (%s, %s, %s)")
     b = (NULL, '00:00', '23.55', '44.55')
     cursor.execute(a, b)
-    cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite)" "VALUES (NULL, '00:00', '23.55', '44.55');"") 
+    cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite)" "VALUES (NULL, '00:00', '23.55', '44.55');""") 
     conn.close()
     
 # Fin du programme
