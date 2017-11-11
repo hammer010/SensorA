@@ -5,7 +5,7 @@ import dht22
 import datetime
 import os
 print("Temporisation initialisation Raspberry")
-time.sleep(10)
+time.sleep(1)
 
 print("Demarrage programme")
 from ftplib import FTP
@@ -74,7 +74,7 @@ while 1 :
     a = ("INSERT INTO data_sensorA "
                "(id, heure, temperature, humidite) "
                "VALUES (%s, %s, %s)")
-    b = (NULL, '00:00', '23.55', '44.55')
+    b = ('NULL', '00:00', '23.55', '44.55')
     cursor.execute(a, b)
     cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite)" "VALUES (NULL, '00:00', '23.55', '44.55');""") 
     conn.close()
