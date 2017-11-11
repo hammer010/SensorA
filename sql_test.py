@@ -71,6 +71,7 @@ while 1 :
 # Envoi resultats vers mySQL
     conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="COUCOU")
     cursor = conn.cursor()
+    cursor.execute("USE COUCOU;")
     cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite) VALUES (NULL, '00:00', '23.55', '44.55');") 
     
     conn.close()
