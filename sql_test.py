@@ -71,13 +71,15 @@ while 1 :
 # Envoi resultats vers mySQL
     conn = mysql.connector.connect(host="192.168.1.170",user="sensorA",password="sensorA", database="COUCOU")
     cursor = conn.cursor()
-    #a = ("INSERT INTO data_sensorA "
-               #"(id, heure, temperature, humidite) "
-               #"VALUES (%s, %s, %s)")
-    #b = ('NULL', '00:00', '23.55', '44.55')
-    #cursor.execute(a, b)
-    cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite)" "VALUES (NULL, '00:00', '23.55', '44.55');""") 
-    conn.close()
+    insert_stmt = (
+       "INSERT INTO employees (emp_no, first_name, last_name, hire_date) "
+       "VALUES (%s, %s, %s, %s)"
+    )
+    data = (2, 'Jane', 'Doe', datetime.date(2012, 3, 23))
+    cursor.execute(insert_stmt, data)
+
+    #cursor.execute("INSERT INTO data_sensorA (id, heure, temperature, humidite)" "VALUES (NULL, '00:00', '23.55', '44.55');""") 
+    #conn.close()
     
 # Fin du programme
     print("Resultats OK")
