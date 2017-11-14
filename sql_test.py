@@ -1,5 +1,4 @@
-
-import mysql.connector 
+import mysql.connector
 import time
 import dht22
 import datetime
