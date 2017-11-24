@@ -46,6 +46,12 @@ while 1 :
             os.system('clear')
             if i == 10 : 
                 break
+       
+    temp_dec= average(list_temp) - int(average(list_temp))
+    temp_int= int(average(list_temp))
+    print(temp_dec)
+    print(temp_int)
+    
     print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
     print("Temperature: " + str(average(list_temp)) + " C")
     print("Humidite: " + str(average(list_hum)) + " %")
@@ -69,4 +75,4 @@ while 1 :
 # Fin du programme
     print("Resultats OK")
     print("Sleep ...")
-    time.sleep(300)
+    time.sleep(60)
