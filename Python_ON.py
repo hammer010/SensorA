@@ -49,10 +49,6 @@ while 1 :
        
     temp_int= int(average(list_temp))
     temp_dec= int((average(list_temp) - int(average(list_temp)))*100)
- 
-    print(temp_dec)
-    print(temp_int)
-    
     print("Horodatage: " + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")) 
     print("Temperature: " + str(average(list_temp)) + " C")
     print("Humidite: " + str(average(list_hum)) + " %")
