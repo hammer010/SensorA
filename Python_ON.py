@@ -3,7 +3,7 @@ import dht22
 import datetime
 import os
 print("Temporisation initialisation Raspberry")
-time.sleep(120)
+time.sleep(10)
 
 print("Demarrage programme")
 from ftplib import FTP
@@ -42,7 +42,7 @@ while 1 :
             i = i + 1
             os.system('clear')
             print(str(i) + "0%")
-            time.sleep(6)
+            time.sleep(1)
             os.system('clear')
             if i == 10 : 
                 break
