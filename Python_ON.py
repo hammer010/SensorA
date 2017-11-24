@@ -3,7 +3,7 @@ import dht22
 import datetime
 import os
 print("Temporisation initialisation Raspberry")
-time.sleep(10)
+time.sleep(120)
 
 print("Demarrage programme")
 from ftplib import FTP
@@ -20,7 +20,7 @@ gpio.init()
 while 1 :
     
     # Connexion serveur FTP
-    ftp = FTP('192.168.1.70', 'pi', 'raspberry')
+    ftp = FTP('192.168.1.170', 'pi', 'raspberry')
     etat = ftp.getwelcome()
     print "Etat : ",etat
 
