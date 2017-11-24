@@ -47,8 +47,9 @@ while 1 :
             if i == 10 : 
                 break
        
-    temp_dec= average(list_temp) - int(average(list_temp))
     temp_int= int(average(list_temp))
+    temp_dec= (average(list_temp) - int(average(list_temp)))*100
+ 
     print(temp_dec)
     print(temp_int)
     
