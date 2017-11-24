@@ -48,7 +48,7 @@ while 1 :
                 break
        
     temp_int= int(average(list_temp))
-    temp_dec= (average(list_temp) - int(average(list_temp)))*100
+    temp_dec= int((average(list_temp) - int(average(list_temp)))*100)
  
     print(temp_dec)
     print(temp_int)
@@ -62,6 +62,8 @@ while 1 :
     fichier.write(datetime.datetime.now().strftime("%H:%M"))
     fichier.write("\n" + str(average(list_temp)))
     fichier.write("\n" + str(average(list_hum)))
+    fichier.write("\n" + str(temp_int))
+    fichier.write("\n" + str(temp_dec))
     fichier.close()
 
 # Envoi resultats vers serveur FTP
